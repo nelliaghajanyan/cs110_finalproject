@@ -1,0 +1,12 @@
+.starter-template {
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.table th, td {
+    text-align: center;
+}
+
+.table > tbody > tr > td {
+    vertical-align: middle;
+}

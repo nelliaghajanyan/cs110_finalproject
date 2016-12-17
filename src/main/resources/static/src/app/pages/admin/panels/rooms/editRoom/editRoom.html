@@ -1,0 +1,54 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Edit Room</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="form-group">
+        <div class="row">
+            <div class="col-sm-3">
+                <select class="form-control" required ng-model="vm.room.lecturerName"
+                        ng-options="x.name as x.name for x in vm.lecturers">
+                    <option value="" disabled selected hidden>Select lecturer...</option>
+                </select>
+            </div>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" ng-model="vm.room.officeNumber" placeholder="Office Number">
+            </div>
+            <div class="col-sm-3">
+                <!--<input type="text" class="form-control" ng-model="vm.room.officeHourDay" placeholder="Office Hour Day">-->
+                <select class="form-control" required ng-model="vm.room.officeHourDay"
+                        ng-options="x as x for x in vm.daysOfWeek">
+                    <option value="" disabled selected hidden>Select Day...</option>
+                </select>
+            </div>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" ng-model="vm.room.officeHourTime"
+                       placeholder="Office Hour Time">
+            </div>
+        </div>
+    </div>
+    <div class="form-group" ng-show="vm.room.ta">
+        <div class="row">
+            <div class="col-sm-4">
+                <input type="text" class="form-control" ng-model="vm.room.problemSolvingNumber"
+                       placeholder="Problem Solving Number">
+            </div>
+            <div class="col-sm-4">
+                <!--<input type="text" class="form-control" ng-model="vm.room.problemSolvingDay"-->
+                <!--placeholder="Problem Solving Day">-->
+                <select class="form-control" required ng-model="vm.room.problemSolvingDay"
+                        ng-options="x as x for x in vm.daysOfWeek">
+                    <option value="" disabled selected hidden>Select Day...</option>
+                </select>
+            </div>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" ng-model="vm.room.problemSolvingTime"
+                       placeholder="Problem Solving Time">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-lg btn-primary" type="submit" ng-click="vm.edit()">Update</button>
+    <button class="btn btn-lg btn-default" type="submit" ng-click="$dismiss()">Cancel</button>
+
+</div>

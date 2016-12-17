@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="scheduler">
+<head>
+    <meta charset="UTF-8">
+    <title>HelpOH</title>
+    <!--css-libs-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-xeditable/0.5.0/css/xeditable.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/2.1.0/toaster.min.css"/>
+    <link rel="stylesheet" href="src/assets/css/style.css">
+    <!--js-libs-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular-cookies.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular-animate.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.3.0/ui-bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.3.0/ui-bootstrap-tpls.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-base64/2.0.5/angular-base64.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-xeditable/0.5.0/js/xeditable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/2.1.0/toaster.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-smart-table/2.1.8/smart-table.min.js"></script>
+</head>
+<body>
+<div ui-view></div>
+</body>
+
+<!--app.js-->
+<script src="src/app/app.js"></script>
+<!-- |______pages.js-->
+<script src="src/app/pages/pages.module.js"></script>
+<!--           |_______config.module.js-->
+<!--           |_______url.factory.js-->
+<script src="src/app/pages/config/config.module.js"></script>
+<script src="src/app/pages/config/url.factory.js"></script>
+<!--           |_______home.module.js-->
+<!--           |_______homeCtrl.js-->
+<script src="src/app/pages/admin/admin.module.js"></script>
+<script src="src/app/pages/admin/adminCtrl.js"></script>
+<!--                       |____________rooms-->
+<script src="src/app/pages/admin/panels/rooms/roomsCtrl.js"></script>
+<script src="src/app/pages/admin/panels/rooms/addRoom/addRoomCtrl.js"></script>
+<script src="src/app/pages/admin/panels/rooms/editRoom/editRoomCtrl.js"></script>
+<script src="src/app/pages/admin/panels/rooms/deleteRoom/deleteRoomCtrl.js"></script>
+<!--                       |____________sections-->
+<script src="src/app/pages/admin/panels/sections/sectionsCtrl.js"></script>
+<script src="src/app/pages/admin/panels/sections/addSection/addSectionCtrl.js"></script>
+<script src="src/app/pages/admin/panels/sections/editSection/editSectionCtrl.js"></script>
+<script src="src/app/pages/admin/panels/sections/deleteSection/deleteSectionCtrl.js"></script>
+<!--                       |____________subjects-->
+<script src="src/app/pages/admin/panels/subjects/subjectsCtrl.js"></script>
+<script src="src/app/pages/admin/panels/subjects/addSubject/addSubjectCtrl.js"></script>
+<script src="src/app/pages/admin/panels/subjects/editSubject/editSubjectCtrl.js"></script>
+<script src="src/app/pages/admin/panels/subjects/deleteSubject/deleteSubjectCtrl.js"></script>
+<!--                       |____________lecturer-->
+<script src="src/app/pages/admin/panels/lecturers/lecturersCtrl.js"></script>
+<script src="src/app/pages/admin/panels/lecturers/addLecturer/addLecturerCtrl.js"></script>
+<script src="src/app/pages/admin/panels/lecturers/editLecturer/editLecturerCtrl.js"></script>
+<script src="src/app/pages/admin/panels/lecturers/deleteLecturer/deleteLecturerCtrl.js"></script>
+<!--           |_______dashboard.module.js-->
+<!--           |_______dashboardCtrl.js-->
+<script src="src/app/pages/dashboard/dashboard.module.js"></script>
+<script src="src/app/pages/dashboard/dashboardCtrl.js"></script>
+<!--                       |__________ signinCtrl.js-->
+<script src="src/app/pages/dashboard/signin/signinCtrl.js"></script>
+<script src="src/app/pages/dashboard/signin/account.service.js"></script>
+
+</html>

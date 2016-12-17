@@ -1,0 +1,26 @@
+<form class="form-horizontal">
+    <div class="form-group">
+        <div class="col-sm-1">
+            <button type="button" class="btn btn-success" ng-click="vm.addSectionDialog()">
+                Add
+            </button>
+        </div>
+    </div>
+</form>
+<div class="table-responsive">
+    <table class="table table-bordered table-hover table-condensed">
+        <tr>
+            <th style="width:2%">#</th>
+            <th style="width:85%">Section Name</th>
+            <th style="width:13%">Actions</th>
+        </tr>
+        <tr ng-repeat='section in vm.sections'>
+            <td>{{$index + 1}}</td>
+            <td>{{ section.name }}</td>
+            <td>
+                <button type="button" class="btn btn-primary" ng-click="vm.editSectionDialog($index)">Edit</button>
+                <button type="button" class="btn btn-danger" ng-click="vm.deleteSectionDialog($index)">Delete</button>
+            </td>
+        </tr>
+    </table>
+</div>

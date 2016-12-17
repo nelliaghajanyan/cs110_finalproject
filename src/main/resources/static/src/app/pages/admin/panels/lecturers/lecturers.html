@@ -1,0 +1,46 @@
+<form class="form-horizontal">
+    <div class="form-group">
+        <div class="col-sm-1">
+            <button type="button" class="btn btn-success" ng-click="vm.addLecturerDialog()">
+                Add
+            </button>
+        </div>
+    </div>
+</form>
+<div class="table-responsive">
+    <table class="table table-bordered table-hover table-condensed">
+        <tr>
+            <th style="width:2%">#</th>
+            <th style="width:25%">Lecturer</th>
+            <th style="width:20%">Teaching Associate</th>
+            <th style="width:20%">Section Name</th>
+            <th style="width:20%">Subject Name</th>
+            <th style="width:13%">Actions</th>
+        </tr>
+        <tr ng-repeat='lecturer in vm.lecturers'>
+            <td>{{$index + 1}}</td>
+            <td>
+                {{ lecturer.name }}
+            </td>
+            <td>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" ng-model="lecturer.ta" ng-disabled="true">
+                    </label>
+                </div>
+            </td>
+            <td>
+                {{ lecturer.sectionName }}
+            </td>
+
+            <td>
+                {{ lecturer.subjectName }}
+            </td>
+
+            <td>
+                <button type="button" class="btn btn-primary" ng-click="vm.editLecturerDialog($index)">Edit</button>
+                <button type="button" class="btn btn-danger" ng-click="vm.deleteLecturerDialog($index)">Delete</button>
+            </td>
+        </tr>
+    </table>
+</div>

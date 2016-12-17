@@ -1,0 +1,35 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Add Lecturer</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <form action="">
+        <div class="row">
+            <div class="col-sm-4">
+                <input type="text" class="form-control" ng-model="vm.name" placeholder="Lecturer">
+            </div>
+
+            <div class="col-sm-4">
+                <select class="form-control" required ng-model="vm.subject"
+                        ng-options="x as x.name for x in vm.subjects">
+                    <option value="" disabled selected hidden>Select Subject...</option>
+                </select>
+            </div>
+
+            <div class="col-sm-4">
+                <select class="form-control" required ng-model="vm.section"
+                        ng-options="x as x.name for x in vm.sections">
+                    <option value="" disabled selected hidden>Select Section...</option>
+                </select>
+            </div>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" ng-model="vm.ta">Teaching Associate
+            </label>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-lg btn-primary" type="submit" ng-click="vm.save()">Save</button>
+    <button class="btn btn-lg btn-default" type="submit" ng-click="$dismiss()">Cancel</button>
+</div>

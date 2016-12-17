@@ -1,0 +1,45 @@
+<nav class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" ui-sref="pages.dashboard"><strong>O</strong>ffice <strong>H</strong>ours <strong>Helper</strong></a>
+        </div>
+        <div id="navbar" class="navbar-form navbar-right">
+            <button type="submit" class="btn btn-danger" ng-click="vm.signout()">Sign out</button>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="jumbotron">
+        <toaster-container></toaster-container>
+        <h2>Admin</h2>
+        <div class="panel panel-success">
+            <div class="panel-heading">Subjects</div>
+            <div class="panel-body">
+                <div ui-view="subjects"></div>
+            </div>
+        </div>
+        <div class="panel panel-success">
+            <div class="panel-heading">Sections</div>
+            <div class="panel-body">
+                <div ui-view="sections"></div>
+            </div>
+        </div>
+        <div class="panel panel-success">
+            <div class="panel-heading">Lecturers</div>
+            <div class="panel-body">
+                <div ui-view="lecturers"></div>
+            </div>
+        </div>
+        <div class="panel panel-success">
+            <div class="panel-heading">Rooms</div>
+            <div class="panel-body">
+                <div ui-view="rooms"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,51 @@
+<form class="form-horizontal">
+    <div class="form-group">
+        <div class="col-sm-1">
+            <button type="button" class="btn btn-success" ng-click="vm.addRoomDialog('lg')">Add</button>
+        </div>
+    </div>
+</form>
+<div class="table-responsive">
+    <table class="table table-bordered table-hover table-condensed">
+        <tr>
+            <th style="width:2%">#</th>
+            <th>Office Number</th>
+            <th>Office Hour Day</th>
+            <th>Office Hour Time</th>
+            <th>Lecturer</th>
+            <th>Section Name</th>
+            <th>Subject Name</th>
+            <th>Teaching Associate</th>
+            <th>Problem Solving Number</th>
+            <th>Problem Solving Day</th>
+            <th>Problem Solving Time</th>
+            <th style="width:13%">Action</th>
+        </tr>
+        <tr ng-repeat='room in vm.rooms'>
+            <td>{{$index + 1}}</td>
+            <td>{{room.officeNumber}}</td>
+            <td>{{room.officeHourDay}}</td>
+            <td>{{room.officeHourTime}}</td>
+            <td>{{room.lecturerName}}</td>
+            <td>{{room.sectionName}}</td>
+            <td>{{room.subjectName}}</td>
+            <td>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" ng-model="room.ta" ng-disabled="true">
+                    </label>
+                </div>
+            </td>
+            <td>{{room.problemSolvingNumber}}</td>
+            <td>{{room.problemSolvingDay}}</td>
+            <td>{{room.problemSolvingTime}}</td>
+            <td>
+                <button type="button" class="btn btn-primary" ng-click="vm.editRoomDialog($index)">Edit</button>
+                <button type="button" class="btn btn-danger" ng-click="vm.deleteRoomDialog($index)">Delete
+                </button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+

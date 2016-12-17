@@ -1,0 +1,58 @@
+<nav class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand active"><strong>O</strong>ffice <strong>H</strong>ours <strong>Helper</strong></a>
+        </div>
+        <div id="navbar" class="navbar-form navbar-right">
+            <button type="submit" class="btn btn-success" ng-click="vm.openSignInDialog('sm')">Sign in</button>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="starter-template">
+        <toaster-container></toaster-container>
+        <div class="page-header">
+            <h2></h2>
+        </div>
+        <div class="table-responsive">
+            <table st-table="rooms" st-safe-src="vm.rooms" class="table table-striped">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th st-sort="officeNumber" style="vertical-align: middle;">Office Number</th>
+                    <th st-sort="officeHourDay" style="vertical-align: middle;">Office Hour Day</th>
+                    <th st-sort="officeHourTime" style="vertical-align: middle;">Office Hour Time</th>
+                    <th st-sort="lecturerName" style="vertical-align: middle;">Lecturer</th>
+                    <th st-sort="sectionName" style="vertical-align: middle;">Section Name</th>
+                    <th st-sort="subjectName" style="vertical-align: middle;">Subject Name</th>
+                    <th st-sort="ta" style="vertical-align: middle;">Teaching Associate</th>
+                    <th st-sort="problemSolvingNumber" style="vertical-align: middle;">Problem Solving Number</th>
+                    <th st-sort="problemSolvingDay" style="vertical-align: middle;">Problem Solving Day</th>
+                    <th st-sort="problemSolvingTime" style="vertical-align: middle;">Problem Solving Time</th>
+                </tr>
+                <tr>
+                    <th colspan="11"><input st-search="" class="form-control" placeholder="search..."
+                                            type="text"/></th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr ng-repeat='room in rooms'>
+                    <td>{{$index + 1}}</td>
+                    <td>{{room.officeNumber}}</td>
+                    <td>{{room.officeHourDay}}</td>
+                    <td>{{room.officeHourTime}}</td>
+                    <td>{{room.lecturerName}}</td>
+                    <td>{{room.sectionName}}</td>
+                    <td>{{room.subjectName}}</td>
+                    <td><input type="checkbox" ng-model="room.ta" ng-disabled="true"/></td>
+                    <td>{{room.problemSolvingNumber}}</td>
+                    <td>{{room.problemSolvingDay}}</td>
+                    <td>{{room.problemSolvingTime}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
